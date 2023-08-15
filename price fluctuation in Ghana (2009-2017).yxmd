@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>wfp_market_food_prices.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="adm0_id" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="adm0_name" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="adm1_id" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="adm1_name" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="mkt_id" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="mkt_name" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="cm_id" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="cm_name" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="cur_id" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="cur_name" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="pt_id" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="pt_name" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="um_id" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="um_name" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="mp_month" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="mp_year" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="mp_price" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+            <Field name="mp_commoditysource" size="254" source="File: C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\wfp_market_food_prices.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="282" y="54" width="492" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[Global food price fluctuations can cause famine and large population shifts. Price changes are increasingly critical to policymakers as global warming threatens to destabilize the food supply.
+
+]]></Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="162" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>adm0_name</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2023-06-14 09:35:38</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Ghana</Operand>
+              <StartDate>2023-06-14 09:35:38</StartDate>
+              <EndDate>2023-06-14 09:35:38</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[adm0_name] = "Ghana"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="282" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="adm0_id" selected="True" rename="country id" />
+            <SelectField field="adm0_name" selected="True" rename="country name" />
+            <SelectField field="adm1_id" selected="True" rename="locality id" type="Int64" size="8" />
+            <SelectField field="adm1_name" selected="True" rename="locality name" />
+            <SelectField field="mkt_id" selected="True" rename="market id" type="Int64" size="8" />
+            <SelectField field="mkt_name" selected="True" rename="market name" />
+            <SelectField field="cm_id" selected="True" rename="commodity purchase id" type="Int64" size="8" />
+            <SelectField field="cm_name" selected="True" rename="commodity purchase " />
+            <SelectField field="cur_id" selected="True" rename="currency id" type="Int64" size="8" />
+            <SelectField field="cur_name" selected="True" rename="name of currency" />
+            <SelectField field="pt_id" selected="True" rename="market type id" type="Int64" size="8" />
+            <SelectField field="pt_name" selected="True" rename="market type (Retail/Wholesale/Producer/Farm Gate)" />
+            <SelectField field="um_id" selected="True" rename="measurement id" type="Int64" size="8" />
+            <SelectField field="um_name" selected="True" rename="unit of goods measurement" />
+            <SelectField field="mp_month" selected="True" rename="month recorded" type="Int64" size="8" />
+            <SelectField field="mp_year" selected="True" rename="year recorded" type="Int64" size="8" />
+            <SelectField field="mp_price" selected="True" rename="price paid" type="Int64" size="8" />
+            <SelectField field="mp_commoditysource" selected="True" rename="Source supplying price information" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="402" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="locality name" action="GroupBy" rename="locality name" />
+            <SummarizeField field="market name" action="GroupBy" rename="market name" />
+            <SummarizeField field="commodity purchase " action="GroupBy" rename="commodity purchase " />
+            <SummarizeField field="unit of goods measurement" action="GroupBy" rename="unit of goods measurement" />
+            <SummarizeField field="year recorded" action="GroupBy" rename="year recorded" />
+            <SummarizeField field="price paid" action="Avg" rename="Avg_price paid" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="594" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="locality name" order="Ascending" />
+            <Field field="commodity purchase " order="Ascending" />
+            <Field field="market name" order="Ascending" />
+            <Field field="year recorded" order="Ascending" />
+            <Field field="Avg_price paid" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>locality name - Ascending
+commodity purchase  - Ascending
+market name - Ascending
+year recorded - Ascending
+...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="498" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="FLOOR([Avg_price paid]*100 + 0.1)/100" field="Avg_price paid" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Avg_price paid = FLOOR([Avg_price paid]*100 + 0.1)/100
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="690" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIEC~1\AppData\Local\Temp\Engine_16852_375082f11c6e9a46bda0921f246358cb_\Engine_16852_860341cdedf7b74f8181145e12f298af~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="726" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="19" MaxRecords="">C:\Users\Marie Candy\OneDrive\Bureau\Data analysis - Alteryx\weekly challenge\commodities average price fluctuation in Ghana (2009-2017).yxdb</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <NoSpatialIndex>False</NoSpatialIndex>
+            <SaveSource>True</SaveSource>
+            <WriteCompatibleVersion>False</WriteCompatibleVersion>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>commodities average price fluctuation in Ghana (2009-2017).yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>challenge 1</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="ed18137c-b0c1-4610-81fa-d9daf106ef78" />
+      <Telemetry>
+        <PreviousWorkflowId value="50c3075e-d1d3-4ae2-848e-589fec04a301" />
+        <OriginWorkflowId value="50c3075e-d1d3-4ae2-848e-589fec04a301" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="260">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="126" width="1128" height="588" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[
+Recently, your local arcade introduced a new virtual reality (VR) experience for people of all ages. They wanted to know how well the VR headsets were performing, so they conducted a survey last week to gather feedback from users. The arcade wants you to use the dataset from the survey to determine which brand of headsets had the highest rating. They will purchase more of those headsets in the future.
+
+The arcade is currently working with three brands: HTC Vive, PlayStation VR, and Oculus Rift. They would like you to conduct an analysis for each brand.
+
+The arcade owner also wants you to categorize users based on their age ranges. The age groups are as follows:
+
+18–28 years old
+29–39 years old
+40–50 years old
+51 years old and older
+
+In the dataset, you have values for each user that include Duration (the length of time the user spent in the VR experience in minutes), and a Motion Sickness Rating, which is a reported value from 1-10, with higher values indicating a higher level of motion sickness. Ideally the users would feel very little motion sickness regardless of how long they are using the headsets. You have a Fun Score formula to apply to determine the correlation between the duration of time on the VR and the reported motion sickness.
+
+Fun Score = Motion Sickness/60 * Duration in Minutes
+
+Using the Fun Score formula, determine which brand had more than 20 people in each age group who would receive a fun score of <1 = LIFE CHANGING! 
+
+Fun Scores:
+9 or above = Refund
+8 or above = Really sick
+7 or above = Sick
+6 or above = Dizzy
+5 or above = Feeling weird
+4 or above = Pretty good
+3 or above = Fun
+2 or above = Great!
+1 or above = AMAZING
+<1 = LIFE CHANGING!
+
+
+
+Source: https://www.kaggle.com/datasets/aakashjoshi123/virtual-reality-experiences
+]]></Text>
+          <Font name="Arial" size="9.75" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="261">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="66" y="738" width="792" height="372" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Input</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="262">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="990" y="738" width="192" height="132" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Output</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="264">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="150" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIEC~1\AppData\Local\Temp\Engine_11504_b3087ea9ddd4534eb6f9603a76e84da3_\Engine_11504_cd4984c452c243409209ddd1a52300bf~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="265">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="324" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+          <BG_Image>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</BG_Image>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="266">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="894" y="78" width="288" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Weekly Challenge #382</Text>
+          <Font name="Microsoft Sans Serif" size="16.2" style="0" />
+          <TextColor r="23" g="28" b="63" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="2" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="270">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">VR_Headset_Dataset.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>VR_Headset_Dataset.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="UserID" size="254" source="File: C:\Users\omaira.lacey\alteryx.com\GRP_Weekly Challenge Development and Delivery - General\Repository\Challenge 300-399\Challenge_BETH\VR_Headset_Dataset.csv" type="V_String" />
+            <Field name="Age" size="254" source="File: C:\Users\omaira.lacey\alteryx.com\GRP_Weekly Challenge Development and Delivery - General\Repository\Challenge 300-399\Challenge_BETH\VR_Headset_Dataset.csv" type="V_String" />
+            <Field name="Gender" size="254" source="File: C:\Users\omaira.lacey\alteryx.com\GRP_Weekly Challenge Development and Delivery - General\Repository\Challenge 300-399\Challenge_BETH\VR_Headset_Dataset.csv" type="V_String" />
+            <Field name="VRHeadset" size="254" source="File: C:\Users\omaira.lacey\alteryx.com\GRP_Weekly Challenge Development and Delivery - General\Repository\Challenge 300-399\Challenge_BETH\VR_Headset_Dataset.csv" type="V_String" />
+            <Field name="Duration" size="254" source="File: C:\Users\omaira.lacey\alteryx.com\GRP_Weekly Challenge Development and Delivery - General\Repository\Challenge 300-399\Challenge_BETH\VR_Headset_Dataset.csv" type="V_String" />
+            <Field name="MotionSickness" size="254" source="File: C:\Users\omaira.lacey\alteryx.com\GRP_Weekly Challenge Development and Delivery - General\Repository\Challenge 300-399\Challenge_BETH\VR_Headset_Dataset.csv" type="V_String" />
+            <Field name="ImmersionLevel" size="254" source="File: C:\Users\omaira.lacey\alteryx.com\GRP_Weekly Challenge Development and Delivery - General\Repository\Challenge 300-399\Challenge_BETH\VR_Headset_Dataset.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="271">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="1014" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="5" />
+          <Fields>
+            <Field name="Fun Scale" />
+            <Field name="Count" />
+            <Field name="Age Group" />
+            <Field name="Brand" />
+          </Fields>
+          <Data>
+            <r>
+              <c>LIFE CHANGING!</c>
+              <c>27</c>
+              <c>29-39</c>
+              <c>Oculus Rift</c>
+            </r>
+            <r>
+              <c>LIFE CHANGING!</c>
+              <c>24</c>
+              <c>40-50</c>
+              <c>Oculus Rift</c>
+            </r>
+            <r>
+              <c>LIFE CHANGING!</c>
+              <c>24</c>
+              <c>51+</c>
+              <c>Oculus Rift</c>
+            </r>
+            <r>
+              <c>LIFE CHANGING!</c>
+              <c>23</c>
+              <c>18-28</c>
+              <c>Playstation VR</c>
+            </r>
+            <r>
+              <c>LIFE CHANGING!</c>
+              <c>22</c>
+              <c>29-39</c>
+              <c>Playstation VR</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="272">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1098" y="774" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\MARIEC~1\AppData\Local\Temp\Engine_11504_b3087ea9ddd4534eb6f9603a76e84da3_\Engine_11504_8a0959b25b8a5645b2c37814999e5749~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="273">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="138" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="UserID" selected="True" type="Int64" size="8" />
+            <SelectField field="Age" selected="True" type="Int64" size="8" />
+            <SelectField field="VRHeadset" selected="True" rename="Brand" />
+            <SelectField field="Duration" selected="True" type="Float" size="4" />
+            <SelectField field="MotionSickness" selected="True" type="Int64" size="8" />
+            <SelectField field="ImmersionLevel" selected="True" type="Int64" size="8" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="274">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="522" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Count] &gt;= 20 and [Fun Scale]='LIFE CHANGING!'</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Count] &gt;= 20 and [Fun Scale]='LIFE CHANGING!'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="277">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="210" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="([MotionSickness]/60)*[Duration]&#xA;" field="FunScore" size="19.3" type="FixedDecimal" />
+            <FormulaField expression="IF [FunScore]&lt;1 THEN &quot;LIFE CHANGING!&quot; ELSEif [FunScore]&gt;=1 and [FunScore] &lt;=2 then 'AMAZING!' elseif [FunScore]&gt;=2 and [FunScore] &lt;=3 then 'Great!' elseif [FunScore]&gt;=3 and [FunScore] &lt;=4 then 'Fun' elseif [FunScore]&gt;=4 and [FunScore] &lt;=5 then 'Pretty good' elseif [FunScore]&gt;=5 and [FunScore] &lt;=6 then 'Feeling weird' elseif [FunScore]&gt;=6 and [FunScore] &lt;=7 then 'Dizzy' elseif [FunScore]&gt;=7 and [FunScore] &lt;=8 then 'Sick' elseif [FunScore]&gt;=8 and [FunScore] &lt;= 9 then 'Really sick' else 'Refund' ENDIF" field="Fun Scale" size="1073741823" type="V_WString" />
+            <FormulaField expression="IF [Age]&gt;=18 and [Age]&lt;=28 THEN '18-28' Elseif [Age]&gt;=29 and [Age]&lt;=39 THEN '29-39' ELSEif [Age]&gt;=40 and [Age]&lt;=50 THEN '40-50' ELSEif [Age]&gt;=51 then '51+' Else 'Check' ENDIF" field=" Age Group" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FunScore = ([MotionSickness]/60)*[Duration]
+
+Fun Scale = IF [FunScore]&lt;1 THEN "L...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="279">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="306" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="UserID" selected="True" />
+            <SelectField field="Age" selected="True" />
+            <SelectField field=" Age Group" selected="True" />
+            <SelectField field="Gender" selected="True" />
+            <SelectField field="Brand" selected="True" />
+            <SelectField field="Duration" selected="True" />
+            <SelectField field="MotionSickness" selected="True" />
+            <SelectField field="ImmersionLevel" selected="True" />
+            <SelectField field="FunScore" selected="True" />
+            <SelectField field="Comment" selected="False" />
+            <SelectField field="Fun Scale" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="280">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="414" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Fun Scale" action="GroupBy" rename="Fun Scale" />
+            <SummarizeField field=" Age Group" action="Count" rename="Count" />
+            <SummarizeField field=" Age Group" action="GroupBy" rename=" Age Group" />
+            <SummarizeField field="Brand" action="GroupBy" rename="Brand" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="281">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="618" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="Brand" order="Ascending" />
+            <Field field="Count" order="Descending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Brand - Ascending
+Count - Descending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="269">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="248" y="2708" width="668" height="92" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Alteryx Educational Asset - Terms and Conditions</Caption>
+          <Style TextColor="#ffffff" FillColor="#0d2345" BorderColor="#ffffff" Transparency="1" Margin="10" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="268">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="258" y="2742" width="648" height="48" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Use of this Alteryx asset is for educational purposes only and bound by the conditions set forth on alteryx.com/terms-and-conditions. Alteryx Information may not be reproduced, transmitted or distributed without Alteryx, Inc.'s permission.”</Text>
+              <Font name="Times New Roman" size="8.25" style="0" />
+              <TextColor name="White" />
+              <FillColor name="White" />
+              <Shape shape="3" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="270" Connection="Output" />
+      <Destination ToolID="264" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="270" Connection="Output" />
+      <Destination ToolID="273" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="271" Connection="Output" />
+      <Destination ToolID="272" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="273" Connection="Output" />
+      <Destination ToolID="277" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="274" Connection="True" />
+      <Destination ToolID="281" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="277" Connection="Output" />
+      <Destination ToolID="279" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="279" Connection="Output" />
+      <Destination ToolID="280" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="280" Connection="Output" />
+      <Destination ToolID="274" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Challenge 382_start file - Marie Candy</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="2b50081f-8653-4b5b-8fbf-1e853d44fda5" />
+      <Telemetry>
+        <PreviousWorkflowId value="41a7be54-422a-40dd-b0ee-097fadb400b1" />
+        <OriginWorkflowId value="95e00c7f-fb90-47b1-844c-686313cf854a" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
